@@ -6,6 +6,7 @@ using UnityEngine;
 public class PewPewDevice : MonoBehaviour
 {
     public GameObject Bullet; 
+    public Vector3 Aim; 
     // Start is called before the first frame update
     void Start()
     {
@@ -17,9 +18,11 @@ public class PewPewDevice : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Vector3 gunPosition = transform.position; 
-            Quaternion gunRotation = transform.rotation;
-            Instantiate(Bullet, gunPosition, gunRotation); 
+          //  Vector3 gunPosition = transform.position; 
+          Vector3 Aim = transform.position; 
+         Quaternion gunRotation = transform.rotation;
+         Instantiate(Bullet, Aim, gunRotation); 
+         //   Instantiate(Bullet, gunPosition, gunRotation); 
         }
     }
 

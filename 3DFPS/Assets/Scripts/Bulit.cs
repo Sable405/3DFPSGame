@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class Bulit : MonoBehaviour
 {
+   
     public float speed = 10;
     public float lifespan = 10f;
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<RigidBody>().velocity = transform.forward * speed;
+        GetComponent<Rigidbody>().velocity = transform.forward * speed;
 
         Destroy(gameObject, lifespan);
     }
