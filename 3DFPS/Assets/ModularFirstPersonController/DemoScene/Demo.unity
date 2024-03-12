@@ -5669,10 +5669,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38ba82ef1d80e4e48b1d428541d6c4a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Gun: {fileID: 668247924977143949}
   Bullet: {fileID: 4167936396744225466, guid: ea73e667b2ef04a8692bc691cb4329c9, type: 3}
   Aim: {x: 0, y: 0, z: 0}
   ammo: 0
-  Re: 0
+  Rep: {fileID: 3864683091169166739}
+  Ree: 1
   ACP: {fileID: 1402976524}
 --- !u!4 &147993573149100599
 Transform:
@@ -5785,7 +5787,7 @@ Animator:
   m_GameObject: {fileID: 668247924977143949}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 7c593c27351ed4872a1c308cb98cb790, type: 2}
+  m_Controller: {fileID: 9100000, guid: bc4b5e6e4c5a64437a29af24ea67dc48, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

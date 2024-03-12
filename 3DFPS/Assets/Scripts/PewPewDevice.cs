@@ -6,17 +6,20 @@ using TMPro;
 
 public class PewPewDevice : MonoBehaviour
 {
+    public GameObject Gun;
     public GameObject Bullet; 
     public Vector3 Aim; 
     public float ammo; 
    
-   private Animation Rep; 
-   public bool Re; 
+   public Animator Rep; 
+
+   public bool Ree = false; 
     public TextMeshProUGUI ACP;
     // Start is called before the first frame update
     void Start()
     {
-        Rep = gameObject.GetComponent<Animation>();
+        
+        Rep = Gun.GetComponent<Animator>();
         ammo = 6;
         ACP.text = ammo.ToString(); 
     }
@@ -38,13 +41,23 @@ public class PewPewDevice : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.R))
             {
-                Re = true; 
-                ammo = 6;
-                ACP.text = ammo.ToString(); 
-
+                StartCoroutine(stasrt()); 
             }
         }
+        Rep.SetBool("Ree", Ree); 
     }
+    IEnumerator stasrt()
+    {
+    Ree = true; 
+   yield return new WaitForSeconds(1.6f);
+    ammo = 6;
+    ACP.text = ammo.ToString(); 
+    Ree = false; 
+    
+        
+    }
+
+
 
 
 }
