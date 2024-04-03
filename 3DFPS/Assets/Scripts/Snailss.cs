@@ -5,8 +5,12 @@ public class Snailss : MonoBehaviour
     public Transform playerTransform; // Reference to the player's transform
     public float movementSpeed = 5f; // Speed at which the object moves
 
+    public float FixedRotation = 5; //Sets snail to sit upright
+
     private void Update()
     {
+       // Vector3 eulerAngles = transform.eulerAngles;
+      //  transform.eulerAngles = new Vector3( eulerAngle.z);
         if (playerTransform != null)
         {
             // Rotate towards the player
