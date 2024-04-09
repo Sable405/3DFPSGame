@@ -32,6 +32,7 @@ public class HealthManager : MonoBehaviour
                 // Handle the object's destruction or disable it, as needed
                 // gameObject.SetActive(false); // Example: Disable the object
                 // Destroy(gameObject); // Example: Destroy the object
+                Destroy(this.gameObject);
             }
         }
     }
