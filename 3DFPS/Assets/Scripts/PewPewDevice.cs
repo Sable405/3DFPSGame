@@ -15,6 +15,11 @@ public class PewPewDevice : MonoBehaviour
 
    public bool Ree = false; 
     public TextMeshProUGUI ACP;
+
+    public TextMeshProUGUI Kill;
+        public float Tee; 
+        public bool mov = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +27,7 @@ public class PewPewDevice : MonoBehaviour
         Rep = Gun.GetComponent<Animator>();
         ammo = 6;
         ACP.text = ammo.ToString(); 
+        Kill.text = Tee.ToString();
     }
 
     // Update is called once per frame
@@ -39,7 +45,10 @@ public class PewPewDevice : MonoBehaviour
             }
         }
         Rep.SetBool("Ree", Ree); 
+
+        
     }
+
     IEnumerator stasrt()
     {
     Ree = true; 
@@ -58,8 +67,18 @@ public class PewPewDevice : MonoBehaviour
           Vector3 Aim = transform.position; 
          Quaternion gunRotation = transform.rotation;
          Instantiate(Bullet, Aim, gunRotation);
-          yield return new WaitForSeconds(1f);
+          yield return new WaitForSeconds(0.2f);
     }
+
+    public void Kilt() 
+    {
+        Tee = Tee + 1;
+        Kill.text = Tee.ToString();
+    }
+
+
+
+
 
 
 
