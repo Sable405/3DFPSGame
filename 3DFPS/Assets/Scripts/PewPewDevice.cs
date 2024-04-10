@@ -4,8 +4,12 @@ using UnityEditor;
 using UnityEngine;
 using TMPro; 
 
+
 public class PewPewDevice : MonoBehaviour
 {
+    public AudioClip Shooting; 
+    public AudioClip RElad;
+    public AudioSource _Sound;
     public GameObject Gun;
     public GameObject Bullet; 
     public Vector3 Aim; 
@@ -18,11 +22,12 @@ public class PewPewDevice : MonoBehaviour
 
     public TextMeshProUGUI Kill;
         public float Tee; 
-        public bool mov = false;
+  
 
     // Start is called before the first frame update
     void Start()
     {
+        _Sound = GetComponent<AudioSource>();
         Ree = false;
         Rep = Gun.GetComponent<Animator>();
         ammo = 6;
@@ -36,6 +41,7 @@ public class PewPewDevice : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && ammo > 0)
         {
          StartCoroutine(WaitGunTime());
+         _Sound.PlayOneShot(Shooting, 1.0f);
         }
         if (ammo <= 0)
         {
@@ -51,6 +57,7 @@ public class PewPewDevice : MonoBehaviour
 
     IEnumerator stasrt()
     {
+    _Sound.PlayOneShot(RElad, 1.0f);
     Ree = true; 
    yield return new WaitForSeconds(1.6f);
     ammo = 6;
