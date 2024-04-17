@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement; 
 
 
 public class Times : MonoBehaviour
@@ -43,8 +44,8 @@ public class Times : MonoBehaviour
         if (!_isRunning) return;
         if (timerType == TimerType.Countdown && timeToDisplay < 0.0f)
         {
-            //EventManager.OnTimerStop();
-          //  SceneManager.LoadScene(3);
+           //Put end Timer stuff HEREE LOOK HERE FUTURE KRIS LOOOKK OVER HERE YOU BLIND MAN
+          SceneManager.LoadScene(3);
             return;
         }
 
