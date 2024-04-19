@@ -42,7 +42,7 @@ public class Zom : MonoBehaviour
             {
                 Shoot.Kilt(); // Call the method to increment the kill count
             }
-            Destroy(gameObject, 1f); // Destroy the enemy after a short delay
+            Destroy(gameObject, 0.05f); // Destroy the enemy after a short delay
         }
     }
 }

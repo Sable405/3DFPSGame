@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement; 
 public class HealthManager : MonoBehaviour
 {
     public Slider healthBar; // Reference to the UI slider representing the health
@@ -33,6 +33,7 @@ public class HealthManager : MonoBehaviour
                 // gameObject.SetActive(false); // Example: Disable the object
                 // Destroy(gameObject); // Example: Destroy the object
                 Destroy(this.gameObject);
+                SceneManager.LoadScene(5);
             }
         }
     }

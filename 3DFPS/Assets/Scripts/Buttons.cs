@@ -26,4 +26,9 @@ public class Buttons : MonoBehaviour
         SceneManager.LoadScene(2);
     }
 
+    public void OnPClick()
+    {
+        SceneManager.LoadScene(4);
+    }
+
 }
