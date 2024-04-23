@@ -1,15 +1,36 @@
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement; 
+using UnityEngine.SceneManagement;
+using System.Collections;
+
 public class HealthManager : MonoBehaviour
 {
     public Slider healthBar; // Reference to the UI slider representing the health
+    public float fillSpeed = 1f; // Speed at which the health bar fills up
+
     private float currentHealth;
+    private float targetHealth;
 
     void Start()
     {
-        // Initialize health to the max value of the slider
-        currentHealth = healthBar.maxValue;
+        // Initialize health to 1
+        currentHealth = 1f;
+        targetHealth = healthBar.maxValue;
+        StartCoroutine(FillHealthBar());
+    }
+
+    IEnumerator FillHealthBar()
+    {
+        while (currentHealth < targetHealth)
+        {
+            // Increase current health over time until it reaches the target health
+            currentHealth += fillSpeed * Time.deltaTime;
+            UpdateHealthUI();
+            yield return null;
+        }
+
+        // Ensure current health is exactly the target health
+        currentHealth = targetHealth;
         UpdateHealthUI();
     }
 
