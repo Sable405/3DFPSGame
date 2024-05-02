@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -317,7 +317,8 @@ MonoBehaviour:
   m_text: 'You have taken a deal and the king of the undworld wants to go back on
     that deal. You were dealt immortality and the king wants it back. He has sent
     the forces of hell and the king of immortality after you. One touch from him
-    and you are dead. Get there and kill him before the timer runs out. '
+    and you are dead. Get to the big church at the end and kill him before the timer
+    runs out. '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1009404a401e04a80926cdcce66a2bf7, type: 2}
   m_sharedMaterial: {fileID: 5619567345029472848, guid: 1009404a401e04a80926cdcce66a2bf7, type: 2}
@@ -806,7 +807,10 @@ MonoBehaviour:
     Control - Crouch
 
 
-    R - Reload'
+    R - Reload
+
+
+    E - Open Big Church Door'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1009404a401e04a80926cdcce66a2bf7, type: 2}
   m_sharedMaterial: {fileID: 5619567345029472848, guid: 1009404a401e04a80926cdcce66a2bf7, type: 2}
