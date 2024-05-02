@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/End.unity
     guid: 4baae6260cd3d4ff1aec85c001f5f1e6
+  - enabled: 1
+    path: Assets/Scenes/DeathSnail.unity
+    guid: 775d4d05b42d9284c8fbf91bc85de37e
   m_configObjects: {}

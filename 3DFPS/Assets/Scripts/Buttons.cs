@@ -30,5 +30,10 @@ public class Buttons : MonoBehaviour
     {
         SceneManager.LoadScene(4);
     }
+ public void Cont()
+    {
+        SceneManager.LoadScene(1);
+    }
+
 
 }
